@@ -3,71 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Le Redoux Music Shop</title>
+  <title>LaRedoux Music Shop</title>
   <style>
     body {
       font-family: sans-serif;
-      background-color: #fafafa;
+      background-color: #f5f5f5;
       color: #222;
       text-align: center;
       margin: 0;
       padding: 20px;
     }
+    header {
+      margin-bottom: 30px;
+    }
     h1 {
       font-size: 2em;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 0 0 10px;
     }
     .album {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 15px;
-      margin: 15px auto;
+      margin: 20px auto;
       width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     img {
       width: 100%;
       border-radius: 10px;
     }
-    button {
-      background-color: #0070ba;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #005b96;
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
-  <h1>Le Redoux Music Shop</h1>
-  <p>CDs and Vinyl available for purchase</p>
+  <header>
+    <h1>LaRedoux Music Shop</h1>
+    <p>Official CDs and Vinyl available for purchase</p>
+  </header>
 
+  <!-- CD PRODUCT -->
   <div class="album">
-    <img src="your-cd-cover.jpg" alt="CD Cover">
+    <img src="cd-cover.jpg" alt="CD Cover">
     <h2>Album Title (CD)</h2>
-    <p>$15.00 CAD</p>
+    <p class="price">$15.00 CAD</p>
     <div id="paypal-button-cd"></div>
   </div>
 
+  <!-- VINYL PRODUCT -->
   <div class="album">
-    <img src="your-vinyl-cover.jpg" alt="Vinyl Cover">
+    <img src="vinyl-cover.jpg" alt="Vinyl Cover">
     <h2>Album Title (Vinyl)</h2>
-    <p>$25.00 CAD</p>
+    <p class="price">$25.00 CAD</p>
     <div id="paypal-button-vinyl"></div>
   </div>
 
+  <!-- PayPal Buttons -->
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=CAD"></script>
   <script>
+    // CD Button
     paypal.Buttons({
       style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'paypal' },
       createOrder: function(data, actions) {
         return actions.order.create({
           purchase_units: [{
-            description: "Album Title (CD)",
+            description: "LaRedoux - Album Title (CD)",
             amount: { value: '15.00' }
           }]
         });
@@ -79,12 +84,13 @@
       }
     }).render('#paypal-button-cd');
 
+    // Vinyl Button
     paypal.Buttons({
       style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'paypal' },
       createOrder: function(data, actions) {
         return actions.order.create({
           purchase_units: [{
-            description: "Album Title (Vinyl)",
+            description: "LaRedoux - Album Title (Vinyl)",
             amount: { value: '25.00' }
           }]
         });
