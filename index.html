@@ -1,106 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LaRedoux Music Shop</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f5f5f5;
-      color: #222;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-    header {
-      margin-bottom: 30px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 5px;
-    }
-    p {
-      margin: 0 0 10px;
-    }
-    .album {
-      background: white;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 20px auto;
-      width: 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .price {
-      font-weight: bold;
-      margin: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>LaRedoux Music Shop</h1>
-    <p>Official CDs and Vinyl available for purchase</p>
-  </header>
+<h2>Albums for Sale</h2>
 
-  <!-- CD PRODUCT -->
-  <div class="album">
-    <img src="cd-cover.jpg" alt="CD Cover">
-    <h2>Album Title (CD)</h2>
-    <p class="price">$15.00 CAD</p>
-    <div id="paypal-button-cd"></div>
-  </div>
+<div class="album">
+  <img src="our-little-place.jpg" alt="Our Little Place cover">
+  <h3>Our Little Place</h3>
+  <p><strong>CD – $15 CAD + P&P</strong></p>
+  <ol>
+    <li>Track 1</li>
+    <li>Track 2</li>
+    <li>Track 3</li>
+    <li>Track 4</li>
+    <li>Track 5</li>
+    <li>Track 6</li>
+    <li>Track 7</li>
+    <li>Track 8</li>
+    <li>Track 9</li>
+    <li>Track 10</li>
+  </ol>
+  <a href="https://redversbailey.bandcamp.com/album/our-little-place-2" target="_blank">Listen on Bandcamp</a>
+  <div id="paypal-our-little-place"></div>
+</div>
 
-  <!-- VINYL PRODUCT -->
-  <div class="album">
-    <img src="vinyl-cover.jpg" alt="Vinyl Cover">
-    <h2>Album Title (Vinyl)</h2>
-    <p class="price">$25.00 CAD</p>
-    <div id="paypal-button-vinyl"></div>
-  </div>
+<div class="album">
+  <img src="if-you-want-to-fly.jpg" alt="If You Want to Fly cover">
+  <h3>If You Want to Fly You've Got to Let Go</h3>
+  <p><strong>Vinyl – $30 CAD + P&P</strong></p>
+  <ol>
+    <li>Track 1</li>
+    <li>Track 2</li>
+    <li>Track 3</li>
+    <li>Track 4</li>
+    <li>Track 5</li>
+    <li>Track 6</li>
+    <li>Track 7</li>
+    <li>Track 8</li>
+    <li>Track 9</li>
+    <li>Track 10</li>
+  </ol>
+  <a href="https://redversbailey.bandcamp.com/album/if-you-want-to-fly-youve-got-to-let-go-2015-10-track-album" target="_blank">Listen on Bandcamp</a>
+  <div id="paypal-if-you-want-to-fly"></div>
+</div>
 
-  <!-- PayPal Buttons -->
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=CAD"></script>
-  <script>
-    // CD Button
-    paypal.Buttons({
-      style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'paypal' },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            description: "LaRedoux - Album Title (CD)",
-            amount: { value: '15.00' }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert('Thank you, ' + details.payer.name.given_name + '!');
-        });
-      }
-    }).render('#paypal-button-cd');
+<div class="album">
+  <img src="misty-history.jpg" alt="Misty History cover">
+  <h3>Misty History</h3>
+  <p><strong>CD – $15 CAD + P&P</strong></p>
+  <ol>
+    <li>Track 1</li>
+    <li>Track 2</li>
+    <li>Track 3</li>
+    <li>Track 4</li>
+    <li>Track 5</li>
+    <li>Track 6</li>
+    <li>Track 7</li>
+    <li>Track 8</li>
+    <li>Track 9</li>
+    <li>Track 10</li>
+  </ol>
+  <a href="https://redversbailey.bandcamp.com/album/misty-history-2014-10-track-album" target="_blank">Listen on Bandcamp</a>
+  <div id="paypal-misty-history"></div>
+</div>
 
-    // Vinyl Button
-    paypal.Buttons({
-      style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'paypal' },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            description: "LaRedoux - Album Title (Vinyl)",
-            amount: { value: '25.00' }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert('Thank you, ' + details.payer.name.given_name + '!');
-        });
-      }
-    }).render('#paypal-button-vinyl');
-  </script>
-</body>
-</html>
+<div class="album">
+  <img src="scrapbook.jpg" alt="Scrapbook cover">
+  <h3>Scrapbook</h3>
+  <p><strong>CD – $15 CAD + P&P</strong></p>
+  <ol>
+    <li>Track 1</li>
+    <li>Track 2</li>
+    <li>Track 3</li>
+    <li>Track 4</li>
+    <li>Track 5</li>
+    <li>Track 6</li>
+    <li>Track 7</li>
+    <li>Track 8</li>
+    <li>Track 9</li>
+    <li>Track 10</li>
+  </ol>
+  <a href="https://redversbailey.bandcamp.com/album/scrapbook" target="_blank">Listen on Bandcamp</a>
+  <div id="paypal-scrapbook"></div>
+</div>
