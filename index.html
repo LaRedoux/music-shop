@@ -4,130 +4,141 @@
   <meta charset="UTF-8">
   <title>LaRedoux – Official Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Google Font -->
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
   <style>
-    body { 
-      margin:0; 
-      font-family:Arial, sans-serif; 
-      background:#fafafa; 
-      color:#111; 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #111;
     }
 
-    header { 
-      position:relative; 
-      text-align:center; 
-      color:white; 
+    /* Only the word LaRedoux uses Anton */
+    .laredoux {
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    header img { 
-      width:100%; 
-      height:auto; 
-      display:block; 
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     header .overlay {
-      position:absolute; 
-      top:0; left:0; right:0; bottom:0;
-      background:rgba(0,0,0,0.35); 
-      display:flex; 
-      flex-direction:column;
-      align-items:center; 
-      justify-content:center;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     header h1 {
       font-family: 'Anton', sans-serif;
-      font-size:3.5rem;
-      color:white;
+      font-size: 3.5rem;
+      color: white;
       text-shadow:
         -0.1em -0.1em 0 black,
          0.1em -0.1em 0 black,
         -0.1em  0.1em 0 black,
          0.1em  0.1em 0 black;
-      margin:0;
+      margin: 0;
     }
 
-    header p { 
-      margin:10px 0; 
-      font-size:1.2rem; 
+    header p {
+      margin: 10px 0;
+      font-size: 1.2rem;
       text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     }
 
-    header a { 
-      display:inline-block; 
-      padding:12px 20px; 
-      margin-top:10px; 
-      background:#ffcc00; 
-      color:#111; 
-      text-decoration:none; 
-      border-radius:6px; 
-      font-weight:bold; 
-      box-shadow:0 2px 6px rgba(0,0,0,0.3);
+    header a {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-top: 10px;
+      background: #ffcc00;
+      color: #111;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     header a:hover {
-      background:#ffaa00;
+      background: #ffaa00;
     }
 
-    section { 
-      padding:40px 20px; 
-      max-width:1100px; 
-      margin:auto; 
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    h2 { 
-      text-align:center; 
-      margin-bottom:20px; 
-      font-family:'Anton', sans-serif;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Anton', sans-serif;
     }
 
-    .album-grid { 
-      display:grid; 
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); 
-      gap:20px; 
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
-    .album-card { 
-      background:#fff; 
-      border-radius:8px; 
-      padding:16px; 
-      text-align:center; 
-      box-shadow:0 2px 6px rgba(0,0,0,0.1); 
+    .album-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .album-card img { 
-      width:100%; 
-      border-radius:6px; 
-      margin-bottom:12px; 
+    .album-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 12px;
     }
 
-    .album-card h3 { 
-      margin:0 0 6px; 
-      font-family:'Anton', sans-serif;
+    .album-card h3 {
+      margin: 0 0 6px;
+      font-family: Arial, sans-serif;
     }
 
-    .album-card p { 
-      margin:0 0 12px; 
-      font-weight:bold; 
+    .album-card h3 .laredoux {
+      font-family: 'Anton', sans-serif;
     }
 
-    .album-card a button {
-      padding:10px 14px; 
-      margin:4px;
-      background:#111; 
-      color:#fff; 
-      border:none; 
-      border-radius:6px; 
-      cursor:pointer;
+    .album-card p {
+      margin: 0 0 12px;
+      font-weight: bold;
     }
 
-    .album-card a button:hover { 
-      background:#444; 
+    form button {
+      padding: 10px 14px;
+      margin: 4px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #444;
     }
   </style>
 </head>
@@ -136,11 +147,11 @@
 
   <!-- HERO -->
   <header>
-    <img src="https://github.com/LaRedoux/music-shop/blob/main/laredoux-live-performance-guitar-singer-youtube.png?raw=true" 
-     alt="LaRedoux live performance, guitarist and singer performing on YouTube stream">
+    <img src="https://github.com/LaRedoux/music-shop/blob/main/laredoux-live-performance-guitar-singer-youtube.png?raw=true"
+      alt="LaRedoux live performance musician singer guitarist performing on YouTube stream">
     <div class="overlay">
-      <h1>LaRedoux</h1>
-      <p>Watch live performances and music videos on YouTube</p>
+      <h1 class="laredoux">LaRedoux</h1>
+      <p>Watch live performances and original music videos on YouTube</p>
       <a href="https://www.youtube.com/@LaRedoux" target="_blank">Visit YouTube</a>
     </div>
   </header>
@@ -152,54 +163,52 @@
 
       <!-- Our Little Place -->
       <div class="album-card">
-        <img src="laredoux-redvers-and-melissa-our-little-place-cd-album-live-performance-guitar-singer-youtube.jpg" 
-             alt="LaRedoux album Our Little Place CD cover artwork">
-        <h3>Our Little Place</h3>
+        <img src="https://github.com/LaRedoux/music-shop/blob/main/laredoux-redvers-and-melissa-our-little-place-cd-album-live-performance-guitar-singer-youtube.png.jpg?raw=true"
+          alt="LaRedoux album Our Little Place CD cover artwork">
+        <h3><span class="laredoux">LaRedoux</span> – Our Little Place</h3>
         <p>CD – $15 CAD + P&amp;P</p>
-        <a href="https://www.paypal.com/ncp/payment/DC2ATWTXQZC4G" target="_blank">
-          <button>Buy CD</button>
-        </a>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL_HERE">
+          <input type="hidden" name="item_name" value="LaRedoux – Our Little Place (CD)">
+          <input type="hidden" name="amount" value="15.00">
+          <input type="hidden" name="currency_code" value="CAD">
+          <input type="hidden" name="shipping" value="5.00">
+          <button type="submit">Buy CD</button>
+        </form>
       </div>
 
       <!-- If You Want to Fly -->
       <div class="album-card">
-        <img src="laredoux-redvers-bailey-if-you-want-to-fly-youve-got-to-let-go-cd-album-live-performance-guitar-singer-youtube.jpg" 
-             alt="LaRedoux album If You Want to Fly You've Got to Let Go CD and Vinyl cover artwork">
-        <h3>If You Want to Fly, You’ve Got to Let Go</h3>
+        <img src="https://github.com/LaRedoux/music-shop/blob/main/laredoux-redvers-bailey-if-you-want-to-fly-youve-got-to-let-go-cd-album-live-performance-guitar-singer-youtube.png.jpg?raw=true"
+          alt="LaRedoux album If You Want to Fly You've Got to Let Go CD and Vinyl cover artwork">
+        <h3><span class="laredoux">LaRedoux</span> – If You Want to Fly, You’ve Got to Let Go</h3>
         <p>Vinyl – $30 CAD + P&amp;P</p>
-        <a href="https://www.paypal.com/ncp/payment/PLACEHOLDER" target="_blank">
-          <button>Buy Vinyl</button>
-        </a>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL_HERE">
+          <input type="hidden" name="item_name" value="LaRedoux – If You Want to Fly, You've Got to Let Go (Vinyl)">
+          <input type="hidden" name="amount" value="30.00">
+          <input type="hidden" name="currency_code" value="CAD">
+          <input type="hidden" name="shipping" value="10.00">
+          <button type="submit">Buy Vinyl</button>
+        </form>
+
         <p>CD – $15 CAD + P&amp;P</p>
-        <a href="https://www.paypal.com/ncp/payment/PLACEHOLDER" target="_blank">
-          <button>Buy CD</button>
-        </a>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL_HERE">
+          <input type="hidden" name="item_name" value="LaRedoux – If You Want to Fly, You've Got to Let Go (CD)">
+          <input type="hidden" name="amount" value="15.00">
+          <input type="hidden" name="currency_code" value="CAD">
+          <input type="hidden" name="shipping" value="5.00">
+          <button type="submit">Buy CD</button>
+        </form>
       </div>
 
       <!-- Misty History -->
       <div class="album-card">
-        <img src="laredoux-redvers-bailey-misty-history-cd-album-live-performance-guitar-singer-youtube.png" 
-             alt="LaRedoux album Misty History CD cover artwork">
-        <h3>Misty History</h3>
-        <p>CD – $15 CAD + P&amp;P</p>
-        <a href="https://www.paypal.com/ncp/payment/PLACEHOLDER" target="_blank">
-          <button>Buy CD</button>
-        </a>
-      </div>
-
-      <!-- Scrapbook -->
-      <div class="album-card">
-        <img src="laredoux-redvers-bailey-scrapbook-cd-album-live-performance-guitar-singer-youtube.png" 
-             alt="LaRedoux album Scrapbook CD cover artwork">
-        <h3>Scrapbook</h3>
-        <p>CD – $15 CAD + P&amp;P</p>
-        <a href="https://www.paypal.com/ncp/payment/PLACEHOLDER" target="_blank">
-          <button>Buy CD</button>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-</body>
-</html>
+        <img src="https://github.com/LaRedoux/music-shop/blob/main/laredoux-redvers-bailey-misty-history-cd-album-live-performance-guitar-singer-youtube.png.jpg?raw=true"
+          alt="LaRedoux album Misty History CD cover artwork">
+        <h3><span class="laredoux">LaRedoux</span> – Misty History</h3>
+        <p>CD – $15 CAD + P&amp
