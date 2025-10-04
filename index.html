@@ -1,85 +1,91 @@
-<h2>Albums for Sale</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LaRedoux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#fafafa; color:#111; }
+    header { position:relative; text-align:center; color:white; }
+    header img { width:100%; height:auto; display:block; }
+    header .overlay {
+      position:absolute; top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.4); display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+    }
+    header h1 { font-size:3rem; margin:0; }
+    header p { margin:10px 0; font-size:1.2rem; }
+    header a { 
+      display:inline-block; padding:12px 20px; margin-top:10px; 
+      background:#ffcc00; color:#111; text-decoration:none; 
+      border-radius:6px; font-weight:bold;
+    }
+    section { padding:40px 20px; max-width:1100px; margin:auto; }
+    h2 { text-align:center; margin-bottom:20px; }
+    .album-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+    .album-card { background:#fff; border-radius:8px; padding:16px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    .album-card img { width:100%; border-radius:6px; margin-bottom:12px; }
+    .album-card h3 { margin:0 0 6px; }
+    .album-card p { margin:0 0 12px; font-weight:bold; }
+    .album-card button {
+      padding:10px 14px; margin:4px;
+      background:#111; color:#fff; border:none; border-radius:6px; cursor:pointer;
+    }
+    .album-card button:hover { background:#444; }
+  </style>
+</head>
+<body>
 
-<!-- OUR LITTLE PLACE -->
-<div class="album">
-  <img src="https://f4.bcbits.com/img/a3608954443_10.jpg" alt="Our Little Place cover">
-  <h3>Our Little Place</h3>
-  <p><strong>CD – $15 CAD + P&P</strong></p>
-  <ol>
-    <li>Intro</li>
-    <li>Our Little Place</li>
-    <li>Autumn Light</li>
-    <li>Song 4</li>
-    <li>Song 5</li>
-    <li>Song 6</li>
-    <li>Song 7</li>
-    <li>Song 8</li>
-    <li>Song 9</li>
-    <li>Song 10</li>
-  </ol>
-  <a href="https://redversbailey.bandcamp.com/album/our-little-place-2" target="_blank">Listen on Bandcamp</a>
-  <div id="paypal-our-little-place"></div>
-</div>
+  <!-- HERO -->
+  <header>
+    <img src="Screenshot 2025-09-21 195433.png" alt="LaRedoux performing">
+    <div class="overlay">
+      <h1>LaRedoux</h1>
+      <p>Watch live streams & videos on YouTube</p>
+      <a href="https://www.youtube.com/@LaRedoux" target="_blank">Visit YouTube</a>
+    </div>
+  </header>
 
-<!-- IF YOU WANT TO FLY -->
-<div class="album">
-  <img src="https://f4.bcbits.com/img/a3250667565_10.jpg" alt="If You Want to Fly cover">
-  <h3>If You Want to Fly You’ve Got to Let Go</h3>
-  <p><strong>Vinyl – $30 CAD + P&P</strong></p>
-  <ol>
-    <li>Track 1</li>
-    <li>Track 2</li>
-    <li>Track 3</li>
-    <li>Track 4</li>
-    <li>Track 5</li>
-    <li>Track 6</li>
-    <li>Track 7</li>
-    <li>Track 8</li>
-    <li>Track 9</li>
-    <li>Track 10</li>
-  </ol>
-  <a href="https://redversbailey.bandcamp.com/album/if-you-want-to-fly-youve-got-to-let-go-2015-10-track-album" target="_blank">Listen on Bandcamp</a>
-  <div id="paypal-if-you-want-to-fly"></div>
-</div>
+  <!-- ALBUMS -->
+  <section>
+    <h2>Albums</h2>
+    <div class="album-grid">
 
-<!-- MISTY HISTORY -->
-<div class="album">
-  <img src="https://f4.bcbits.com/img/a3368827813_10.jpg" alt="Misty History cover">
-  <h3>Misty History</h3>
-  <p><strong>CD – $15 CAD + P&P</strong></p>
-  <ol>
-    <li>Track 1</li>
-    <li>Track 2</li>
-    <li>Track 3</li>
-    <li>Track 4</li>
-    <li>Track 5</li>
-    <li>Track 6</li>
-    <li>Track 7</li>
-    <li>Track 8</li>
-    <li>Track 9</li>
-    <li>Track 10</li>
-  </ol>
-  <a href="https://redversbailey.bandcamp.com/album/misty-history-2014-10-track-album" target="_blank">Listen on Bandcamp</a>
-  <div id="paypal-misty-history"></div>
-</div>
+      <!-- Our Little Place -->
+      <div class="album-card">
+        <img src="https://f4.bcbits.com/img/a3608954443_10.jpg" alt="Our Little Place">
+        <h3>Our Little Place</h3>
+        <p>CD – $15 CAD + P&P</p>
+        <button>Buy CD</button>
+      </div>
 
-<!-- SCRAPBOOK -->
-<div class="album">
-  <img src="https://f4.bcbits.com/img/a4151224578_10.jpg" alt="Scrapbook cover">
-  <h3>Scrapbook</h3>
-  <p><strong>CD – $15 CAD + P&P</strong></p>
-  <ol>
-    <li>Track 1</li>
-    <li>Track 2</li>
-    <li>Track 3</li>
-    <li>Track 4</li>
-    <li>Track 5</li>
-    <li>Track 6</li>
-    <li>Track 7</li>
-    <li>Track 8</li>
-    <li>Track 9</li>
-    <li>Track 10</li>
-  </ol>
-  <a href="https://redversbailey.bandcamp.com/album/scrapbook" target="_blank">Listen on Bandcamp</a>
-  <div id="paypal-scrapbook"></div>
-</div>
+      <!-- If You Want to Fly -->
+      <div class="album-card">
+        <img src="https://f4.bcbits.com/img/a3250667565_10.jpg" alt="If You Want to Fly">
+        <h3>If You Want to Fly You’ve Got to Let Go</h3>
+        <p>Vinyl – $30 CAD + P&P</p>
+        <button>Buy CD</button>
+        <button>Buy Vinyl</button>
+      </div>
+
+      <!-- Misty History -->
+      <div class="album-card">
+        <img src="https://f4.bcbits.com/img/a3368827813_10.jpg" alt="Misty History">
+        <h3>Misty History</h3>
+        <p>CD – $15 CAD + P&P</p>
+        <button>Buy CD</button>
+      </div>
+
+      <!-- Scrapbook -->
+      <div class="album-card">
+        <img src="https://f4.bcbits.com/img/a4151224578_10.jpg" alt="Scrapbook">
+        <h3>Scrapbook</h3>
+        <p>CD – $15 CAD + P&P</p>
+        <button>Buy CD</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
