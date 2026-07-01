@@ -1,10 +1,14 @@
+
+/*
 /* Navigation Bar */
+/* Navigation Bar — styled to match LaRedoux aesthetic */
 .navbar {
   width: 100%;
-  background: #000;
+  background: #000; /* same black as your header overlay */
   padding: 15px 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -20,9 +24,9 @@
 }
 
 .nav-links li a {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Anton', sans-serif; /* matches your headings */
   font-size: 1.3rem;
-  color: #ffcc00;
+  color: #ffffff; 
   text-decoration: none;
   letter-spacing: 1px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.8);
@@ -30,160 +34,146 @@
 }
 
 .nav-links li a:hover {
-  color: #ffaa00;
+  color: #ffaa00; /* your hover yellow */
   text-shadow: 0 2px 6px rgba(0,0,0,0.9);
   transform: translateY(-2px);
 }
 
-/* Body */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fafafa;
-  color: #111;
-}
 
-/* HERO — 75vh so albums peek */
-.hero {
-  height: 75vh;
-  position: relative;
-  overflow: hidden;
-}
+    body { 
+      margin:0; 
+      font-family:Arial, sans-serif; 
+      background:#fafafa; 
+      color:#111; 
+    }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    header { 
+      position:relative; 
+      text-align:center; 
+      color:white; 
+    }
 
-.hero .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.35);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-}
+    header img { 
+      width:100%; 
+      height:auto; 
+      display:block; 
+    }
 
-.hero h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 3.8rem;
-  color: white;
-  text-shadow:
-    -0.1em -0.1em 0 black,
-     0.1em -0.1em 0 black,
-    -0.1em  0.1em 0 black,
-     0.1em  0.1em 0 black;
-  margin: 0;
-}
+    header .overlay {
+      position:absolute; 
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.35); 
+      display:flex; 
+      flex-direction:column;
+      align-items:center; 
+      justify-content:center;
+      padding:0 10px;
+    }
 
-.hero p {
-  margin: 12px 0;
-  font-size: 1.2rem;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-}
+    header h1 {
+      font-family: 'Anton', sans-serif;
+      font-size:3.8rem;
+      color:white;
+      text-shadow:
+        -0.1em -0.1em 0 black,
+         0.1em -0.1em 0 black,
+        -0.1em  0.1em 0 black,
+         0.1em  0.1em 0 black;
+      margin:0;
+    }
 
-.hero a {
-  display: inline-block;
-  padding: 12px 20px;
-  margin-top: 12px;
-  background: #ffcc00;
-  color: #111;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background 0.2s;
-}
+    header p { 
+      margin:12px 0; 
+      font-size:1.2rem; 
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
 
-.hero a:hover {
-  background: #ffaa00;
-}
+    header a { 
+      display:inline-block; 
+      padding:12px 20px; 
+      margin-top:12px; 
+      background:#ffcc00; 
+      color:#111; 
+      text-decoration:none; 
+      border-radius:6px; 
+      font-weight:bold; 
+      box-shadow:0 2px 6px rgba(0,0,0,0.3);
+      transition: background 0.2s;
+    }
 
-/* Fade from hero into albums */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fafafa 100%);
-}
+    header a:hover {
+      background:#ffaa00;
+    }
 
-/* Album Section — pulled upward */
-section {
-  padding: 40px 20px;
-  max-width: 1100px;
-  margin: auto;
-  margin-top: -120px; /* KEY: albums overlap hero */
-}
+    section { 
+      padding:40px 20px; 
+      max-width:1100px; 
+      margin:auto; 
+    }
 
-h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-family: 'Anton', sans-serif;
-  font-size: 2rem;
-}
+    h2 { 
+      text-align:center; 
+      margin-bottom:25px; 
+      font-family:'Anton', sans-serif;
+      font-size:2rem;
+    }
 
-.album-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+    .album-grid { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); 
+      gap:20px; 
+    }
 
-.album-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+    .album-card { 
+      background:#fff; 
+      border-radius:8px; 
+      padding:16px; 
+      text-align:center; 
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); 
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
 
-.album-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+    .album-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
 
-.album-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 12px;
-}
+    .album-card img { 
+      width:100%; 
+      border-radius:6px; 
+      margin-bottom:12px; 
+    }
 
-.album-card h3 {
-  margin: 0 0 8px;
-  font-family: 'Anton', sans-serif;
-}
+    .album-card h3 { 
+      margin:0 0 8px; 
+      font-family:'Anton', sans-serif;
+    }
 
-.album-card p {
-  margin: 0 0 12px;
-  font-weight: bold;
-}
+    .album-card p { 
+      margin:0 0 12px; 
+      font-weight:bold; 
+    }
 
-.album-card button {
-  padding: 10px 14px;
-  margin: 4px;
-  background: #111;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
+    .album-card a button {
+      padding:10px 14px; 
+      margin:4px;
+      background:#111; 
+      color:#fff; 
+      border:none; 
+      border-radius:6px; 
+      cursor:pointer;
+      transition: background 0.2s;
+    }
 
-.album-card button:hover {
-  background: #444;
-}
+    .album-card a button:hover { 
+      background:#444; 
+    }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9rem;
-  color: #555;
-}
+    footer {
+      text-align:center;
+      padding:30px 20px;
+      font-size:0.9rem;
+      color:#555;
+    }
+
+*/
