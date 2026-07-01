@@ -45,7 +45,7 @@ body {
 
 /* HERO section height tweak so albums peek below */
 .hero {
-  height: 80vh;
+  height: 65vh;   /* perfect height to show albums */
   position: relative;
   overflow: hidden;
 }
@@ -187,6 +187,7 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
 
 /*
 /* Navigation Bar */
