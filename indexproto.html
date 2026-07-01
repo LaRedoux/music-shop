@@ -171,4 +171,89 @@
 
     .album-card h3 {
       margin: 0 0 8px;
-      font-family: 'Anton',
+      font-family: 'Anton', sans-serif;
+    }
+
+    .album-card p {
+      margin: 0 0 12px;
+      font-weight: bold;
+    }
+
+    .album-card button {
+      padding: 10px 14px;
+      margin: 4px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .album-card button:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">CDs & Vinyl</a></li>
+      <li><a href="#">Streaming</a></li>
+      <li><a href="#">Lessons</a></li>
+      <li><a href="#">Bio & Press</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img src="https://placehold.co/1600x900" alt="Hero Image Placeholder">
+    <div class="overlay">
+      <h1>LaRedoux</h1>
+      <p>Watch live performances and music videos on YouTube</p>
+      <a href="#">Visit YouTube</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Albums</h2>
+    <div class="album-grid">
+      <div class="album-card">
+        <img src="https://placehold.co/300x300" alt="">
+        <h3>Album One</h3>
+        <p>CD – $20 CAD</p>
+        <button>Buy CD</button>
+      </div>
+
+      <div class="album-card">
+        <img src="https://placehold.co/300x300" alt="">
+        <h3>Album Two</h3>
+        <p>Vinyl – $40 CAD</p>
+        <button>Buy Vinyl</button>
+      </div>
+
+      <div class="album-card">
+        <img src="https://placehold.co/300x300" alt="">
+        <h3>Album Three</h3>
+        <p>CD – $20 CAD</p>
+        <button>Buy CD</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 LaRedoux. All rights reserved.
+  </footer>
+
+</body>
+</html>
