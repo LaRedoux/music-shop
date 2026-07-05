@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDs & Vinyl Store | LaRedoux Official Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">LaRedoux</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cds-vinyl.html" class="active">CDs & Vinyl</a></li>
+        <li><a href="streaming.html">Streaming</a></li>
+        <li><a href="lessons.html">Voice & Lessons</a></li>
+        <li><a href="bio-press.html">Bio & Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="main-content internal-page">
+    <h2>Physical Merch Store</h2>
+    <p class="section-intro">Support independent music directly. All CDs and Vinyl orders are securely packaged and shipped from Canada straight to your door.</p>
+    
+    <div class="album-grid">
+      <div class="album-card">
+        <div class="image-wrapper"><img src="./assets/images/laredoux-redvers-and-melissa-our-little-place-cd-album-live-performance-guitar-singer-youtube.jpg" alt="Our Little Place"></div>
+        <h3>Our Little Place</h3>
+        <p class="price">CD • $20 CAD</p>
+        <div class="button-group"><a href="https://www.paypal.com/ncp/payment/HVZWKZQWVUPK2" target="_blank" rel="noopener noreferrer" class="btn-purchase">Purchase</a></div>
+      </div>
+
+      <div class="album-card">
+        <div class="image-wrapper"><img src="./assets/images/laredoux-redvers-bailey-if-you-want-to-fly-youve-got-to-let-go-cd-album-live-performance-guitar-singer-youtube.jpg" alt="If You Want to Fly"></div>
+        <h3>If You Want to Fly...</h3>
+        <p class="price">Vinyl: $40 CAD | CD: $20 CAD</p>
+        <div class="button-group dual-buttons">
+          <a href="https://www.paypal.com/ncp/payment/MHYQNJP6B5T4N" target="_blank" rel="noopener noreferrer" class="btn-purchase">Vinyl</a>
+          <a href="https://www.paypal.com/ncp/payment/MHYQNJP6B5T4N" target="_blank" rel="noopener noreferrer" class="btn-purchase secondary">CD</a>
+        </div>
+      </div>
+
+      <div class="album-card">
+        <div class="image-wrapper"><img src="./assets/images/laredoux-redvers-bailey-misty-history-cd-album-live-performance-guitar-singer-youtube.png" alt="Misty History"></div>
+        <h3>Misty History</h3>
+        <p class="price">CD • $20 CAD</p>
+        <div class="button-group"><a href="https://www.paypal.com/ncp/payment/S6MAA4NLYXMRG" target="_blank" rel="noopener noreferrer" class="btn-purchase">Purchase</a></div>
+      </div>
+
+      <div class="album-card">
+        <div class="image-wrapper"><img src="./assets/images/laredoux-redvers-bailey-scrapbook-cd-album-live-performance-guitar-singer-youtube.webp" alt="Scrapbook"></div>
+        <h3>Scrapbook</h3>
+        <p class="price">CD • $20 CAD</p>
+        <div class="button-group"><a href="https://www.paypal.com/ncp/payment/2F8E5BN2WHEBW" target="_blank" rel="noopener noreferrer" class="btn-purchase">Purchase</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© <span id="year"></span> LaRedoux. All rights reserved.</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
