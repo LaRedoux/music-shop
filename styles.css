@@ -1,210 +1,347 @@
-/* Navigation Bar — styled to match LaRedoux aesthetic */
+/* ==========================================================================
+   GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+  --bg-main: #0d0e12;
+  --bg-card: #16181f;
+  --text-main: #ffffff;
+  --text-muted: #8e94a4;
+  --accent-gold: #ffcc00;
+  --accent-hover: #e5b800;
+  --nav-blur-bg: rgba(13, 14, 18, 0.8);
+  --border-color: rgba(255, 255, 255, 0.07);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body { 
+  margin: 0; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+  background-color: var(--bg-main); 
+  color: var(--text-main); 
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR (Premium Glassmorphism)
+   ========================================================================== */
 .navbar {
   width: 100%;
-  background: #000; 
-  padding: 15px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--nav-blur-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  box-sizing: border-box;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-brand:hover {
+  color: var(--accent-gold);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 28px;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li a {
-  font-family: 'Anton', sans-serif; 
-  font-size: 1.3rem;
-  color: #ffffff; 
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-muted); 
   text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-  transition: 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
-.nav-links li a:hover {
-  color: #ffaa00; 
-  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
-  transform: translateY(-2px);
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--text-main);
 }
 
-body { 
-  margin:0; 
-  font-family:Arial, sans-serif; 
-  background:#fafafa; 
-  color:#111; 
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero { 
+  position: relative; 
+  text-align: center; 
+  overflow: hidden;
+  height: 60vh;
+  min-height: 400px;
 }
 
-header { 
-  position:relative; 
-  z-index: 0; 
-  text-align:center; 
-  color:white; 
+.hero-img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  display: block; 
 }
 
-header img { 
-  width:100%; 
-  height:auto; 
-  display:block; 
-  z-index: 0; 
+.hero .overlay {
+  position: absolute; 
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(13,14,18,0.2), rgba(13,14,18,0.95)); 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  padding: 0 20px;
 }
 
-header .overlay {
-  position:absolute; 
-  z-index: 1; 
-  top:0; left:0; right:0; bottom:0;
-  background:rgba(0,0,0,0.35); 
-  display:flex; 
-  flex-direction:column;
-  align-items:center; 
-  justify-content:center;
-  padding:0 10px;
-}
-
-header h1 {
+.hero h1 {
   font-family: 'Anton', sans-serif;
-  font-size:3.8rem;
-  color:white;
-  text-shadow:
-    -0.1em -0.1em 0 black,
-     0.1em -0.1em 0 black,
-    -0.1em  0.1em 0 black,
-     0.1em  0.1em 0 black;
-  margin:0;
+  font-size: 5rem;
+  color: var(--text-main);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
-header p { 
-  margin:12px 0; 
-  font-size:1.2rem; 
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+.hero p { 
+  margin: 10px 0 24px 0; 
+  font-size: 1.25rem; 
+  color: #e2e8f0;
+  max-width: 600px;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-header a { 
-  display:inline-block; 
-  padding:12px 20px; 
-  margin-top:12px; 
-  background:#ffcc00; 
-  color:#111; 
-  text-decoration:none; 
-  border-radius:6px; 
-  font-weight:bold; 
-  box-shadow:0 2px 6px rgba(0,0,0,0.3);
-  transition: background 0.2s;
+.btn-hero { 
+  display: inline-block; 
+  padding: 14px 28px; 
+  background-color: var(--accent-gold); 
+  color: #000000; 
+  text-decoration: none; 
+  border-radius: 30px; 
+  font-weight: 700; 
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-header a:hover {
-  background:#ffaa00;
+.btn-hero:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
 }
 
-section { 
-  padding:40px 20px; 
-  max-width: 880px; /* Reduced by 20% from 1100px to shrink desktop layout width */
-  margin:auto; 
-  margin-top: -180px;
+/* ==========================================================================
+   MAIN CONTENT & ALBUMS GRID
+   ========================================================================== */
+.main-content { 
+  padding: 60px 24px; 
+  max-width: 920px; /* Perfectly downsized wide web view wrapper */
+  margin: -100px auto 0 auto;
   position: relative; 
   z-index: 2;
 }
 
 h2 { 
-  text-align:center; 
-  margin-bottom:25px; 
-  font-family:'Anton', sans-serif;
-  font-size:2rem;
+  text-align: center; 
+  margin-bottom: 40px; 
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .album-grid { 
-  display:grid; 
-  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr)); /* Reduced baseline by 20% from 220px */
-  gap:20px; 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); 
+  gap: 24px; 
 }
 
 .album-card { 
-  background:#fff; 
-  border-radius:8px; 
-  padding:16px; 
-  text-align:center; 
-  box-shadow:0 2px 6px rgba(0,0,0,0.1); 
-  transition:transform 0.2s, box-shadow 0.2s;
+  background-color: var(--bg-card); 
+  border-radius: 12px; 
+  padding: 20px; 
+  text-align: center; 
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .album-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #000;
 }
 
 .album-card img { 
-  width:100%; 
-  border-radius:6px; 
-  margin-bottom:12px; 
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.album-card:hover img {
+  transform: scale(1.04);
 }
 
 .album-card h3 { 
-  margin:0 0 8px; 
-  font-family:'Anton', sans-serif;
+  margin: 0 0 8px 0; 
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-main);
+  min-height: 2.6rem; /* Ensures consistent alignments for mismatched title strings */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.album-card p { 
-  margin:0 0 12px; 
-  font-weight:bold; 
+.price { 
+  margin: 0 0 20px 0; 
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
-.album-card a button {
-  padding:10px 14px; 
-  margin:4px;
-  background:#111; 
-  color:#fff; 
-  border:none; 
-  border-radius:6px; 
-  cursor:pointer;
-  transition: background 0.2s;
+.price .pp {
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
 
-.album-card a button:hover { 
-  background:#444; 
+/* ==========================================================================
+   BUTTONS STYLING (Functional Restructuring)
+   ========================================================================== */
+.button-group {
+  margin-top: auto; /* Aligns all buttons across cards neatly at the baseline */
 }
 
+.btn-purchase {
+  display: block;
+  width: 100%;
+  padding: 10px 16px; 
+  background-color: var(--text-main); 
+  color: var(--bg-main); 
+  text-decoration: none;
+  border-radius: 6px; 
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-align: center;
+}
+
+.btn-purchase:hover { 
+  background-color: var(--accent-gold); 
+}
+
+.btn-purchase:active {
+  transform: scale(0.98);
+}
+
+/* Dual Button Row Handling */
+.dual-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-purchase.secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-purchase.secondary:hover {
+  background-color: rgba(255,255,255,0.08);
+  border-color: var(--text-main);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 footer {
-  text-align:center;
-  padding:30px 20px;
-  font-size:0.9rem;
-  color:#555;
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
 }
 
-/* Mobile Responsiveness Media Queries */
+footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 15px 10px;
+  .nav-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 14px;
   }
 
   .nav-links {
     flex-wrap: wrap;       
     justify-content: center;
-    gap: 15px 20px;        
+    gap: 12px 18px;        
   }
 
-  .nav-links li a {
-    font-size: 1.1rem;     
+  .hero {
+    height: 50vh;
   }
 
-  header h1 {
-    font-size: 2.4rem;     
+  .hero h1 {
+    font-size: 3.2rem;     
   }
 
-  header p {
+  .hero p {
     font-size: 1rem;
   }
 
-  section {
-    margin-top: -40px;     
-    padding: 20px 15px;
+  .main-content {
+    margin-top: -30px;     
+    padding: 30px 16px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
   }
 }
