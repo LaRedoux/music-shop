@@ -113,6 +113,7 @@
       max-width:1100px; 
       margin:auto; 
       margin-top: -180px;
+      position: relative;
       z-index: 2;
     }
 
