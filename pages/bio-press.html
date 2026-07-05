@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Biography & Press | LaRedoux Backstory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">LaRedoux</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cds-vinyl.html">CDs & Vinyl</a></li>
+        <li><a href="streaming.html">Streaming</a></li>
+        <li><a href="lessons.html">Voice & Lessons</a></li>
+        <li><a href="bio-press.html" class="active">Bio & Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="main-content internal-page text-layout">
+    <h2>Biography & Press</h2>
+    <p class="section-intro">The artistic path and evolution of Redvers & Mélissa's independent music venture.</p>
+
+    <div class="info-card">
+      <h3>The Story Behind LaRedoux</h3>
+      <p>Blending intimate acoustic textures, intricate multi-part live looping techniques, and distinct vocals, LaRedoux has steadily grown a dedicated global following. Based near Montreal, Canada, the collaborative synergy between Redvers and Mélissa defines their discography.</p>
+      <p style="margin-top: 15px;">From whimsical, morning-inspired tunes like "Eggs and Toast" to deep indie compositions found across their full-length albums like <em>If You Want to Fly, You've Got to Let Go</em> and <em>Misty History</em>, their music remains raw, human, and authentic.</p>
+    </div>
+
+    <div class="placeholder-media-block">
+      <p style="color: var(--text-muted); font-weight: 600;">📷 [Placeholder: Insert Band / Press Photo Here]</p>
+    </div>
+  </section>
+
+  <footer><p>© <span id="year"></span> LaRedoux. All rights reserved.</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
