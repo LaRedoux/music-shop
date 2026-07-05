@@ -91,6 +91,22 @@ body {
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
+
+
+/* Site-Wide Film Grain Overlay */
+.film-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 9999; /* Keeps it on top of everything */
+  pointer-events: none; /* Crucial: lets users click buttons right through the video */
+  mix-blend-mode: screen; /* Drops the black background, leaving only the white dust/scratches */
+  opacity: 0.4; /* Adjust this down (e.g., 0.2) if you want the scratches to be subtler */
+}
+
 .hero { 
   position: relative; 
   text-align: center; 
