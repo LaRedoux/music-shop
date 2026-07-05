@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact LaRedoux | Inquiries & Bookings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">LaRedoux</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cds-vinyl.html">CDs & Vinyl</a></li>
+        <li><a href="streaming.html">Streaming</a></li>
+        <li><a href="lessons.html">Voice & Lessons</a></li>
+        <li><a href="bio-press.html">Bio & Press</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="main-content internal-page text-layout">
+    <h2>Get In Touch</h2>
+    <p class="section-intro">For lesson availability, direct booking inquires, or general messages, use the platform below.</p>
+
+    <div class="contact-wrapper">
+      <form action="#" method="POST" class="contact-form" onsubmit="event.preventDefault(); alert('Placeholder Form Submitted!');">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="6" required placeholder="Type your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn-hero" style="border: none; width: 100%; cursor: pointer;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer><p>© <span id="year"></span> LaRedoux. All rights reserved.</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
