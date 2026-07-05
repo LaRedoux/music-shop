@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Streaming & Digital Audio | LaRedoux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">LaRedoux</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cds-vinyl.html">CDs & Vinyl</a></li>
+        <li><a href="streaming.html" class="active">Streaming</a></li>
+        <li><a href="lessons.html">Voice & Lessons</a></li>
+        <li><a href="bio-press.html">Bio & Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="main-content internal-page text-layout">
+    <h2>Live Streams & Digital Music</h2>
+    <p class="section-intro">Catch the live looping experience, acoustic sets, and community hangouts directly through your favorite platforms.</p>
+    
+    <div class="info-card">
+      <h3>🔴 YouTube Live Streams</h3>
+      <p>We consistently stream raw live-looping music sessions, interactions, and chill acoustic jams directly from Montreal. Make sure to subscribe, turn on notifications, and catch the next session live!</p>
+      <a href="https://www.youtube.com/@LaRedoux" target="_blank" rel="noopener noreferrer" class="btn-hero" style="margin-top: 10px;">Visit YouTube Channel</a>
+    </div>
+
+    <div class="grid-two-column">
+      <div class="info-card">
+        <h3>💬 Join the Discord Community</h3>
+        <p>Hang out with the community between live events, request songs, and track our up-to-date streaming calendar directly on Discord.</p>
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" class="btn-purchase text-center">Join Discord</a>
+      </div>
+      
+      <div class="info-card">
+        <h3>☕ Support on StreamElements</h3>
+        <p>Tips are absolutely never expected, but they go directly towards supporting the generation of high-quality audio equipment and creative tools.</p>
+        <a href="https://streamelements.com/" target="_blank" rel="noopener noreferrer" class="btn-purchase secondary text-center">Send a Tip</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© <span id="year"></span> LaRedoux. All rights reserved.</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
