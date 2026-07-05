@@ -162,7 +162,7 @@ body {
 .main-content { 
   padding: 60px 24px; 
   max-width: 920px; 
-  margin: -100px auto 0 auto;
+  margin: 0px auto 0 auto;
   position: relative; 
   z-index: 2;
 }
