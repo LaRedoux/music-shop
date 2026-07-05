@@ -21,25 +21,17 @@ html {
   box-sizing: inherit;
 }
 
+/* FILM GRAIN OVERLAY */
 .film-grain {
-  /* Fix it to the viewport so it covers the whole screen */
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  
-  /* Make sure it stays on top of everything */
   z-index: 9999;
-  
-  /* THIS IS THE KEY: Ignore all mouse interactions */
   pointer-events: none;
-  
-  /* Blend it into your dark theme */
   opacity: 0.15;
   mix-blend-mode: overlay;
-  
-  /* The generated noise data */
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
@@ -113,22 +105,6 @@ body {
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
-
-
-/* Site-Wide Film Grain Overlay */
-.film-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 9999; /* Keeps it on top of everything */
-  pointer-events: none; /* Crucial: lets users click buttons right through the video */
-  mix-blend-mode: screen; /* Drops the black background, leaving only the white dust/scratches */
-  opacity: 0.4; /* Adjust this down (e.g., 0.2) if you want the scratches to be subtler */
-}
-
 .hero { 
   position: relative; 
   text-align: center; 
@@ -205,49 +181,18 @@ body {
   z-index: 2;
 }
 
-.internal-page {
-  margin-top: 0px !important;
-  padding-top: 80px;
-}
-
-.section-intro {
-  text-align: center;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: -20px auto 40px auto;
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-.text-layout p {
-  line-height: 1.7;
-  color: #e2e8f0;
-}
-
-h2 { 
-  text-align: center; 
-  margin-bottom: 40px; 
-  font-family: 'Anton', sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .album-grid { 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); 
   gap: 24px; 
 }
 
-.album-card, .info-card { 
+.album-card { 
   background-color: var(--bg-card); 
   border-radius: 12px; 
   padding: 20px; 
   border: 1px solid var(--border-color);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.album-card {
   text-align: center;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   display: flex;
@@ -258,21 +203,6 @@ h2 {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
   border-color: rgba(255, 255, 255, 0.15);
-}
-
-.info-card {
-  margin-bottom: 24px;
-}
-
-.info-card h3 {
-  margin: 0 0 12px 0;
-  color: var(--accent-gold);
-}
-
-.grid-two-column {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
 }
 
 .image-wrapper {
@@ -320,12 +250,9 @@ h2 {
 }
 
 /* ==========================================================================
-   BUTTONS & FORMS
+   BUTTONS
    ========================================================================== */
-.button-group {
-  margin-top: auto; 
-}
-
+.button-group { margin-top: auto; }
 .btn-purchase {
   display: block;
   width: 100%;
@@ -339,78 +266,17 @@ h2 {
   transition: background-color 0.2s ease, transform 0.1s ease;
   text-align: center;
 }
-
-.btn-purchase:hover { 
-  background-color: var(--accent-gold); 
-}
-
-.dual-buttons {
-  display: flex;
-  gap: 10px;
-}
-
+.btn-purchase:hover { background-color: var(--accent-gold); }
+.dual-buttons { display: flex; gap: 10px; }
 .btn-purchase.secondary {
   background-color: transparent;
   color: var(--text-main);
   border: 1px solid rgba(255,255,255,0.2);
 }
-
 .btn-purchase.secondary:hover {
   background-color: rgba(255,255,255,0.08);
   border-color: var(--text-main);
 }
-
-/* Form Styles */
-.contact-wrapper {
-  max-width: 550px;
-  margin: 0 auto;
-  background-color: var(--bg-card);
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #ccd2e0;
-}
-
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 12px;
-  background-color: var(--bg-main);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  color: #fff;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-  outline: none;
-  border-color: var(--accent-gold);
-}
-
-.placeholder-media-block {
-  width: 100%;
-  height: 250px;
-  background-color: var(--bg-card);
-  border: 2px dashed var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  margin-top: 30px;
-}
-
-.text-center { text-align: center; }
 
 /* ==========================================================================
    FOOTER
@@ -421,7 +287,6 @@ footer {
   border-top: 1px solid var(--border-color);
   margin-top: 40px;
 }
-
 footer p {
   margin: 0;
   font-size: 0.85rem;
@@ -430,40 +295,12 @@ footer p {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN MEDIA QUERIES
+   RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 16px;
-    padding: 14px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;       
-    justify-content: center;
-    gap: 12px 18px;        
-  }
-
-  .hero {
-    height: 50vh;
-  }
-
-  .hero h1 {
-    font-size: 3.2rem;     
-  }
-
-  .main-content {
-    margin-top: -30px;     
-    padding: 30px 16px;
-  }
-  
-  .internal-page {
-    padding-top: 40px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 24px;
-  }
+  .nav-container { flex-direction: column; gap: 16px; padding: 14px; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px 18px; }
+  .hero { height: 50vh; }
+  .hero h1 { font-size: 3.2rem; }
+  .main-content { margin-top: -30px; padding: 30px 16px; }
 }
