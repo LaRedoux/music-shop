@@ -69,11 +69,6 @@
   <section class="main-content internal-page text-layout">
     <h2>Biography & Press</h2>
 
-    <!-- Featured Press Photo -->
-    <div class="bio-image-container" style="max-width: 500px; margin: 20px auto; text-align: center;">
-      <img src="https://festivoix.com/wp-content/uploads/2026/04/LaRedoux.png" alt="Camille Bowie of LaRedoux close-up with a microphone during a music performance" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    </div>
-
     <div class="info-card">
       <h3>From Gloucester to Trois-Rivières</h3>
       <p>LaRedoux started in Gloucester, England, grown from the seed planted at lunchtime, hiding in the school music room writing songs with friends. Behind the project is songwriter and multi-instrumentalist Camille Bowie. Before settling in Trois-Rivières, Quebec, Camille spent two decades living, working and performing across more than 20 countries, carving out an independent path fueled by direct, genuine songwriting.</p>
@@ -82,13 +77,37 @@
       <p>On stage, Camille builds a captivating world out of humorous, thoughtful lyrics and goosebump-inducing melodies. Shifting between delicate electric fingerstyle and driving rhythm guitar in drop tunings, she commands an eclectic repertoire of over a hundred songs.</p>
       <p>LaRedoux is ultimately envisioned as a full collaborative band, and Camille is currently looking for the right local musicians in Quebec to complete that lineup. For now, the project operates as a self-contained solo force. Loop station and sample pad appear occasionally as atmospheric colors and the heart of the show remains pure musicianship and a sense of fun. When LaRedoux gets lost in an outro loop, expect slow attack filters, lush reverbs, and vocal layering to frame the soaring melodies of original tracks like <em>Giving It Up</em> and <em>Hounded By Ghosts</em>.</p>
       
-      <h3> A Shared Front Porch</h3>
+      <h3>A Shared Front Porch</h3>
       <p>The livestreams offer a beautiful contrast to the hyper-focused delivery of the stage show. These broadcasts function as casual, interactive spaces where the audience entirely shapes the evening. A global community connects over favorite tracks, shares the deeply personal meanings behind their song requests, and tests the limits of Camille's expansive catalog with a standing willingness to attempt almost any Beatles song.</p>
       <p>Built on a foundation of mutual kindness, the channel has naturally evolved into a welcoming sanctuary and a soft, inclusive place to land for queer, neurodivergent, and authentic souls looking for genuine human connection.</p>
     </div>
+
+    <!-- Click-to-Play Video Section -->
+    <div class="video-embed-container" style="max-width: 750px; margin: 40px auto 20px auto; position: relative; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.3); cursor: pointer;" onclick="playEmbeddedVideo(this)">
+      <img src="assets/images/LaRedoux-Naked_Camille-3d-text.png" alt="LaRedoux - Naked video thumbnail" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      
+      <!-- Custom CSS Play Button Overlay -->
+      <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.35)'" onmouseout="this.style.background='rgba(0,0,0,0.15)'">
+        <div style="width: 74px; height: 74px; background: rgba(255, 255, 255, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#000" style="margin-left: 4px;">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <footer><p>© <span id="year"></span> LaRedoux. All rights reserved.</p></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <!-- Video Swap Script -->
+  <script>
+    function playEmbeddedVideo(element) {
+      element.removeAttribute('onclick');
+      element.innerHTML = '<iframe src="https://www.youtube.com/embed/6G1oYFkHf4c?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: 100%; border: none;"></iframe>';
+    }
+    
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
