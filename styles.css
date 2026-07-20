@@ -69,7 +69,7 @@ body {
   display: block;
 }
 
-/* Custom Typographic Fallback styling if Logo fails to load */
+/* Typographic Fallback styling for Navigation Bar */
 .logo-text-fallback-nav {
   font-family: 'Anton', sans-serif;
   font-size: 1.6rem;
@@ -144,7 +144,7 @@ body {
   filter: drop-shadow(0 4px 15px rgba(0,0,0,0.6));
 }
 
-/* Custom Typographic Fallback styling for Hero section if image fails to load */
+/* Typographic Fallback styling for Hero Section */
 .logo-text-fallback-hero {
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
