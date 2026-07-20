@@ -46,7 +46,7 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,14 +57,16 @@ body {
   display: flex;
   align-items: center;
   transition: opacity 0.3s ease;
+  height: 1.6rem; /* Lock container bounds to match typography exactly */
 }
 
 .nav-brand:hover {
   opacity: 0.85;
 }
 
+/* Scaled to match the fallback text size exactly */
 .brand-logo-img {
-  height: 160px; /* 5x Larger profile */
+  height: 1.6rem;
   width: auto;
   display: block;
 }
@@ -75,6 +77,7 @@ body {
   color: var(--text-main);
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .nav-links {
@@ -122,30 +125,33 @@ body {
 .hero .overlay {
   position: relative; 
   z-index: 2;
-  /* Corrected 100% gradient parsing typo to resolve heavy alignment mask bugs */
   background: linear-gradient(
     to bottom, 
     rgba(13, 14, 18, 0.1) 0%, 
-    rgba(13, 14, 18, 0.4) 40%, 
+    rgba(13, 14, 18, 0.5) 50%, 
     var(--bg-main) 100%
   ); 
   display: flex; 
   flex-direction: column;
   align-items: center; 
   justify-content: center;
-  padding: 20px 20px 10px 20px; /* Compressed padding blocks */
+  padding: 40px 20px 20px 20px;
 }
 
 .hero-brand-container {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  height: 5rem; /* Forces identical structural layout footprint regardless of src loading state */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Scaled to match the 5rem fallback heading text exactly */
 .hero-logo-img {
-  max-height: 350px; /* 5x Larger layout target cap */
+  height: 5rem;
   width: auto;
   display: block;
   max-width: 100%;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));
 }
 
 .logo-text-fallback-hero {
@@ -154,10 +160,9 @@ body {
   color: var(--text-main);
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  line-height: 1;
 }
 
-/* Reduced video container scale down to an ultra-clean, small 420px width footprint */
 .hero-video-wrapper {
   width: 100%;
   max-width: 420px; 
@@ -208,12 +213,12 @@ body {
 }
 
 /* ==========================================================================
-   MAIN CONTENT & ALBUMS GRID (Pulled Upward)
+   MAIN CONTENT & ALBUMS GRID
    ========================================================================== */
 .main-content { 
-  padding: 0px 24px 40px 24px; /* Set padding-top to 0 to seamlessly tuck the releases list directly beneath the video player */
+  padding: 20px 24px 40px 24px;
   max-width: 920px; 
-  margin: -10px auto 0 auto; /* Added tight negative structural alignment to pull elements closer together */
+  margin: 0 auto; 
   position: relative; 
   z-index: 2;
 }
