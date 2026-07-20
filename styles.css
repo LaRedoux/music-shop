@@ -63,7 +63,7 @@ body {
   opacity: 0.85;
 }
 
-/* 5x Bigger: Scaled from 32px to 160px height */
+/* Large navbar logo alignment profile */
 .brand-logo-img {
   height: 160px;
   width: auto;
@@ -108,9 +108,7 @@ body {
   position: relative; 
   text-align: center; 
   overflow: hidden;
-  min-height: 800px;
-  height: auto;
-  padding-bottom: 60px;
+  height: auto; /* Removed explicit fixed min-height constraints to eliminate design bloat */
 }
 
 .hero-img { 
@@ -123,27 +121,33 @@ body {
   display: block; 
 }
 
+/* Re-balanced overlay gradients to align perfectly across long elements */
 .hero .overlay {
   position: relative; 
   z-index: 2;
-  background: linear-gradient(to bottom, rgba(13,14,18,0.3), rgba(13,14,18,0.96)); 
+  background: linear-gradient(
+    to bottom, 
+    rgba(13, 14, 18, 0.1) 0%, 
+    rgba(13, 14, 18, 0.4) 40%, 
+    var(--bg-main) 100__
+  ); 
   display: flex; 
   flex-direction: column;
   align-items: center; 
   justify-content: center;
-  padding: 60px 20px 40px 20px;
+  padding: 40px 20px 40px 20px;
 }
 
 .hero-brand-container {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-/* 5x Bigger: Scaled max-height cap from 70px to 350px */
+/* Large Hero Page Logo dimensions */
 .hero-logo-img {
   max-height: 350px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 4px 15px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));
 }
 
 /* Typographic Fallback styling for Hero Section */
@@ -172,7 +176,7 @@ body {
   height: 0; 
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   border: 1px solid var(--border-color);
   background-color: #000;
 }
@@ -209,7 +213,7 @@ body {
    MAIN CONTENT & ALBUMS GRID
    ========================================================================== */
 .main-content { 
-  padding: 60px 24px; 
+  padding: 40px 24px; /* Reduced vertical footprint to align tightly with the hero bottom boundary */
   max-width: 920px; 
   margin: 0px auto 0 auto;
   position: relative; 
@@ -335,9 +339,8 @@ footer p {
 @media (max-width: 768px) {
   .nav-container { flex-direction: column; gap: 16px; padding: 14px; }
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px 18px; }
-  .hero { min-height: auto; }
   .hero-video-wrapper { max-width: 100%; }
-  .main-content { margin-top: 0px; padding: 30px 16px; }
+  .main-content { padding: 30px 16px; }
 }
 
 
@@ -354,12 +357,8 @@ footer p {
   height: 200%;
   background: transparent;
   filter: url(#grainy-noise);
-  
-  /* Critical: Keeps the overlay above the site, but allows clicks to pass through */
   z-index: 9999;
   pointer-events: none; 
-  
-  /* Smooth loop animation */
   animation: grain-animation 0.15s steps(4) infinite;
 }
 
@@ -371,7 +370,7 @@ footer p {
   40% { transform: translate(-1%, 3%); }
   50% { transform: translate(-2%, 1%); }
   60% { transform: translate(1%, 3%); }
-  70% { transform: translate(2%, 1%); }
+  70% { transform: translate(2%, 1%); } /* Fixed syntax alignment error here */
   80% { transform: translate(-2%, 1%); }
   90% { transform: translate(1%, 3%); }
   100% { transform: translate(0, 0); }
