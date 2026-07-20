@@ -63,14 +63,12 @@ body {
   opacity: 0.85;
 }
 
-/* Large navbar logo alignment profile */
 .brand-logo-img {
   height: 160px;
   width: auto;
   display: block;
 }
 
-/* Typographic Fallback styling for Navigation Bar */
 .logo-text-fallback-nav {
   font-family: 'Anton', sans-serif;
   font-size: 1.6rem;
@@ -108,7 +106,7 @@ body {
   position: relative; 
   text-align: center; 
   overflow: hidden;
-  height: auto; /* Removed explicit fixed min-height constraints to eliminate design bloat */
+  height: auto; 
 }
 
 .hero-img { 
@@ -121,28 +119,27 @@ body {
   display: block; 
 }
 
-/* Re-balanced overlay gradients to align perfectly across long elements */
 .hero .overlay {
   position: relative; 
   z-index: 2;
+  /* Fixed gradient formatting code to clear alignment artifacts */
   background: linear-gradient(
     to bottom, 
     rgba(13, 14, 18, 0.1) 0%, 
-    rgba(13, 14, 18, 0.4) 40%, 
-    var(--bg-main) 100__
+    rgba(13, 14, 18, 0.5) 50%, 
+    var(--bg-main) 100%
   ); 
   display: flex; 
   flex-direction: column;
   align-items: center; 
   justify-content: center;
-  padding: 40px 20px 40px 20px;
+  padding: 30px 20px 20px 20px; /* Tightened layout base padding */
 }
 
 .hero-brand-container {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
-/* Large Hero Page Logo dimensions */
 .hero-logo-img {
   max-height: 350px;
   width: auto;
@@ -150,7 +147,6 @@ body {
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));
 }
 
-/* Typographic Fallback styling for Hero Section */
 .logo-text-fallback-hero {
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
@@ -160,13 +156,14 @@ body {
   text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
+/* Decreased video player sizing layout constraints from 640px to 480px width */
 .hero-video-wrapper {
   width: 100%;
-  max-width: 640px;
+  max-width: 480px; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
 .video-container {
@@ -191,13 +188,13 @@ body {
 
 .btn-hero { 
   display: inline-block; 
-  padding: 12px 26px; 
+  padding: 10px 22px; 
   background-color: var(--accent-gold); 
   color: #000000; 
   text-decoration: none; 
   border-radius: 30px; 
   font-weight: 700; 
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -213,7 +210,7 @@ body {
    MAIN CONTENT & ALBUMS GRID
    ========================================================================== */
 .main-content { 
-  padding: 40px 24px; /* Reduced vertical footprint to align tightly with the hero bottom boundary */
+  padding: 10px 24px 40px 24px; /* Pulls the releases grid significantly closer to the header frame */
   max-width: 920px; 
   margin: 0px auto 0 auto;
   position: relative; 
@@ -340,7 +337,7 @@ footer p {
   .nav-container { flex-direction: column; gap: 16px; padding: 14px; }
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px 18px; }
   .hero-video-wrapper { max-width: 100%; }
-  .main-content { padding: 30px 16px; }
+  .main-content { padding: 20px 16px; }
 }
 
 
@@ -370,7 +367,7 @@ footer p {
   40% { transform: translate(-1%, 3%); }
   50% { transform: translate(-2%, 1%); }
   60% { transform: translate(1%, 3%); }
-  70% { transform: translate(2%, 1%); } /* Fixed syntax alignment error here */
+  70% { transform: translate(2%, 1%); } 
   80% { transform: translate(-2%, 1%); }
   90% { transform: translate(1%, 3%); }
   100% { transform: translate(0, 0); }
