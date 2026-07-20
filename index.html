@@ -55,7 +55,8 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-brand">
-        <img src="assets/images/laredoux-logo-pride-trans-lgbtq-lgbtqia+july-2026-camille-bowie.PNG" alt="LaRedoux" class="brand-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <!-- Logo Image with safe JS fallback to text if image fails to load -->
+        <img src="assets/images/laredoux-logo-pride-trans-lgbtq-lgbtqia+july-2026-camille-bowie.PNG" alt="LaRedoux" class="brand-logo-img" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='inline-block';">
         <span class="logo-text-fallback-nav" style="display: none;">LaRedoux</span>
       </a>
       <ul class="nav-links">
@@ -70,17 +71,20 @@
   </nav>
 
   <header class="hero">
+    <!-- Existing Hero Image remains intact -->
     <img 
       src="./assets/images/laredoux-halloween-stream-2025.webp" 
       alt="LaRedoux live on stage, performing guitar and vocals on a Halloween Stream"
       class="hero-img">
     <div class="overlay">
+      
+      <!-- Brand Logo Header Area -->
       <div class="hero-brand-container">
-        <img src="assets/images/laredoux-logo-pride-trans-lgbtq-lgbtqia+july-2026-camille-bowie.PNG" alt="LaRedoux" class="hero-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <img src="assets/images/laredoux-logo-pride-trans-lgbtq-lgbtqia+july-2026-camille-bowie.PNG" alt="LaRedoux" class="hero-logo-img" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='block';">
         <span class="logo-text-fallback-hero" style="display: none;">LaRedoux</span>
       </div>
       
-      <!-- Featured Video Player Layout -->
+      <!-- Main Video Module Stack -->
       <div class="hero-video-wrapper">
         <div class="video-container">
           <iframe 
@@ -91,6 +95,7 @@
             allowfullscreen>
           </iframe>
         </div>
+        <!-- YouTube redirection action placed directly below the player frame -->
         <a href="https://www.youtube.com/@LaRedoux" target="_blank" rel="noopener noreferrer" class="btn-hero">
           Watch on YouTube
         </a>
