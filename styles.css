@@ -57,14 +57,14 @@ body {
   display: flex;
   align-items: center;
   transition: opacity 0.3s ease;
-  height: 1.6rem; /* Lock container bounds to match typography exactly */
+  height: 1.6rem; /* Enforces absolute alignment tracking */
 }
 
 .nav-brand:hover {
   opacity: 0.85;
 }
 
-/* Scaled to match the fallback text size exactly */
+/* Equalized to 1.6rem text tracking scale */
 .brand-logo-img {
   height: 1.6rem;
   width: auto;
@@ -140,13 +140,13 @@ body {
 
 .hero-brand-container {
   margin-bottom: 24px;
-  height: 5rem; /* Forces identical structural layout footprint regardless of src loading state */
+  height: 5rem; /* Rigid dimension tracking block whether image is loaded or hidden */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Scaled to match the 5rem fallback heading text exactly */
+/* Equalized to 5rem hero text size matrix */
 .hero-logo-img {
   height: 5rem;
   width: auto;
@@ -213,7 +213,7 @@ body {
 }
 
 /* ==========================================================================
-   MAIN CONTENT & ALBUMS GRID
+   MAIN CONTENT & ALBUMS GRID (Tucked Upward)
    ========================================================================== */
 .main-content { 
   padding: 20px 24px 40px 24px;
